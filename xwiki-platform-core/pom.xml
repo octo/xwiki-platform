@@ -349,6 +349,12 @@
           -->
           <ignored>
             <!-- Remove the following ignores after we release the current version as final -->
+            <difference>
+              <differenceType>8001</differenceType>
+              <className>com/xpn/xwiki/store/XWikiHibernateBaseStore</className>
+              <method>void createHibernateSequenceIfRequired(java.lang.String, org.hibernate.Session)</method>
+              <justification>Internal stuff</justification>
+            </difference>
           </ignored>
           <excludes>
             <exclude>**/internal/**</exclude>
