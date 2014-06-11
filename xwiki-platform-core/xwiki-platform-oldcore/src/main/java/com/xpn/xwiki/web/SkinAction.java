@@ -241,7 +241,7 @@ public class SkinAction extends XWikiAction
                 String filename = path.substring(path.lastIndexOf("/") + 1, path.length());
                 String mimetype = context.getEngineContext().getMimeType(filename.toLowerCase());
                 Date modified = null;
-                if (isCssMimeType(mimetype) || isJavascriptMimeType(mimetype)) {
+                if (isCssMimeType(mimetype) || isJavascriptMimeType(mimetype) || isLessCssFile(filename)) {
                     // Always force UTF-8, as this is the assumed encoding for text files.
                     String rawContent = new String(data, ENCODING);
                     byte[] newdata = context.getWiki().parseContent(rawContent, context).getBytes(ENCODING);
@@ -372,6 +372,17 @@ public class SkinAction extends XWikiAction
     public boolean isCssMimeType(String mimetype)
     {
         return "text/css".equalsIgnoreCase(mimetype);
+    }
+
+    /**
+     * Checks if a file is a LESS file that should be parsed by velocity.
+     *
+     * @param filename name of the file to check.
+     * @return <tt>true</tt> if the filename represents a LESS.vm file.
+     */
+    private boolean isLessCssFile(String filename)
+    {
+        return filename.toLowerCase().endsWith(".less.vm");
     }
 
     /**

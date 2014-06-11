@@ -23,16 +23,19 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
   <modelVersion>4.0.0</modelVersion>
   <parent>
+    <artifactId>xwiki-platform-flamingo</artifactId>
     <groupId>org.xwiki.platform</groupId>
-    <artifactId>xwiki-platform-core</artifactId>
     <version>6.1-SNAPSHOT</version>
   </parent>
-  <artifactId>xwiki-platform-flamingo</artifactId>
-  <name>XWiki Platform - Flamingo</name>
-  <packaging>pom</packaging>
-  <description>Provide a fresh, responsive and modern skin for XWiki, based on Bootstrap.</description>
-  <modules>
-    <module>xwiki-platform-flamingo-skin</module>
-    <module>xwiki-platform-flamingo-themes</module>
-  </modules>
+  <artifactId>xwiki-platform-flamingo-themes</artifactId>
+  <name>XWiki Platform - Flamingo - Themes</name>
+  <packaging>xar</packaging>
+  <description>Themes for Flamingo</description>
+  <dependencies>
+    <dependency>
+      <groupId>org.webjars</groupId>
+      <artifactId>less</artifactId>
+      <version>1.7.0</version>
+    </dependency>
+  </dependencies>
 </project>
