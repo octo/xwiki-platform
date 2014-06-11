@@ -21,8 +21,8 @@
 -->
 
 <xwikidoc>
-  <web>FlamingoThemes</web>
-  <name>DefaultTheme</name>
+  <web>FlamingoThemesCode</web>
+  <name>Translations</name>
   <language/>
   <defaultLanguage/>
   <translation>0</translation>
@@ -31,11 +31,11 @@
   <author>xwiki:XWiki.Admin</author>
   <customClass/>
   <contentAuthor>xwiki:XWiki.Admin</contentAuthor>
-  <creationDate>1402406667000</creationDate>
-  <date>1402475194000</date>
-  <contentUpdateDate>1402406667000</contentUpdateDate>
+  <creationDate>1402502400000</creationDate>
+  <date>1402503543000</date>
+  <contentUpdateDate>1402503543000</contentUpdateDate>
   <version>1.1</version>
-  <title/>
+  <title>Translations</title>
   <defaultTemplate/>
   <validationScript/>
   <comment/>
@@ -44,7 +44,7 @@
   <hidden>true</hidden>
   <object>
     <class>
-      <name>FlamingoThemesCode.ThemeClass</name>
+      <name>XWiki.TranslationDocumentClass</name>
       <customClass/>
       <customMapping/>
       <defaultViewSheet/>
@@ -52,43 +52,40 @@
       <defaultWeb/>
       <nameField/>
       <validationScript/>
-      <body-bg>
-        <customDisplay/>
+      <scope>
+        <cache>0</cache>
         <disabled>0</disabled>
-        <name>body-bg</name>
-        <number>2</number>
-        <picker>0</picker>
-        <prettyName>body-bg</prettyName>
-        <size>30</size>
-        <unmodifiable>0</unmodifiable>
-        <validationMessage/>
-        <validationRegExp/>
-        <classType>com.xpn.xwiki.objects.classes.StringClass</classType>
-      </body-bg>
-      <text-color>
-        <customDisplay/>
-        <disabled>0</disabled>
-        <name>text-color</name>
+        <displayType>select</displayType>
+        <multiSelect>0</multiSelect>
+        <name>scope</name>
         <number>1</number>
-        <picker>0</picker>
-        <prettyName>text-color</prettyName>
-        <size>30</size>
+        <prettyName>Scope</prettyName>
+        <relationalStorage>0</relationalStorage>
+        <separator> </separator>
+        <separators> ,|</separators>
+        <size>1</size>
         <unmodifiable>0</unmodifiable>
-        <validationMessage/>
-        <validationRegExp/>
-        <classType>com.xpn.xwiki.objects.classes.StringClass</classType>
-      </text-color>
+        <values>GLOBAL|WIKI|USER|ON_DEMAND</values>
+        <classType>com.xpn.xwiki.objects.classes.StaticListClass</classType>
+      </scope>
     </class>
-    <name>FlamingoThemes.DefaultTheme</name>
+    <name>FlamingoThemesCode.Translations</name>
     <number>0</number>
-    <className>FlamingoThemesCode.ThemeClass</className>
-    <guid>d0ecbff2-1d49-4cf0-8565-cf91f720d6ae</guid>
+    <className>XWiki.TranslationDocumentClass</className>
+    <guid>a82c1186-bcdf-414f-8fac-09dad00b3f02</guid>
     <property>
-      <body-bg>#99FF00</body-bg>
-    </property>
-    <property>
-      <text-color>#000000</text-color>
+      <scope>ON_DEMAND</scope>
     </property>
   </object>
-  <content/>
+  <content>platform.flamingo.title.variables=Variables
+platform.flamingo.title.preview=Preview
+platform.flamingo.autorefresh=Auto refresh
+platform.flamingo.refresh=Refresh
+platform.flamingo.refreshwarning=The refresh can takes several seconds and the preview might not be 100% accurate.
+platform.flamingo.themes.category.base-colors=Base colors
+platform.flamingo.themes.category.typography=Typography
+platform.flamingo.themes.category.forms=Forms
+platform.flamingo.themes.category.buttons=Buttons
+platform.flamingo.themes.category.navbar=Navigation Bar
+platform.flamingo.themes.category.dropdowns=Drop downs</content>
 </xwikidoc>
