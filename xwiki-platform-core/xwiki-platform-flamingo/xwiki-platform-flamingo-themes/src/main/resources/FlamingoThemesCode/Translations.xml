@@ -26,7 +26,7 @@
   <language/>
   <defaultLanguage/>
   <translation>0</translation>
-  <parent>FlamingoThemes.WebHome</parent>
+  <parent>FlamingoThemesCode.WebHome</parent>
   <creator>xwiki:XWiki.Admin</creator>
   <author>xwiki:XWiki.Admin</author>
   <customClass/>
@@ -77,11 +77,12 @@
       <scope>ON_DEMAND</scope>
     </property>
   </object>
-  <content>platform.flamingo.title.variables=Variables
-platform.flamingo.title.preview=Preview
-platform.flamingo.autorefresh=Auto refresh
-platform.flamingo.refresh=Refresh
-platform.flamingo.refreshwarning=The refresh can takes several seconds and the preview might not be 100% accurate.
+  <content>platform.flamingo.themes.title.variables=Variables
+platform.flamingo.themes.title.preview=Preview
+platform.flamingo.themes.autorefresh=Auto refresh
+platform.flamingo.themes.refresh=Refresh
+platform.flamingo.themes.refreshwarning=The refresh can takes several seconds and the preview might not be 100% accurate.
+platform.flamingo.themes.loading=Loading...
 platform.flamingo.themes.category.base-colors=Base colors
 platform.flamingo.themes.category.typography=Typography
 platform.flamingo.themes.category.forms=Forms
