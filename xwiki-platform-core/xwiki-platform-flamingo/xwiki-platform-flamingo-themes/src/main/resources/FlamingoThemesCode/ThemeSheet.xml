@@ -239,7 +239,7 @@ require(['jQueryNoConflict'], function($) {
       var link = document.createElement("link");
       link.rel = "stylesheet/less";
       link.type = "text/css";
-      link.href = "/xwiki/bin/skin/skins/flamingo/less/style.less.vm";
+      link.href = "$xwiki.getSkinFile('less/style.less.vm', true)?colorTheme=no";
       /*var script1 = document.createElement("script");
       script1.text = "less = {env: \"production\"};";*/
       var script2 = document.createElement("script");
@@ -365,7 +365,7 @@ require(['jQueryNoConflict'], function($) {
 }
 
 div#bt-variables input{
-  width: 90%;
+  width: 80%;
 }
 
 div#preview-curtain{
@@ -405,7 +405,16 @@ div#preview-curtain{
 #set($variables = {
   "base-colors": {
     "text-color": "color",
-    "body-bg": "color"
+    "body-bg": "color",
+    "xwiki-page-content-bg" : "color",
+    "link-color": "color",
+    "brand-primary": "color",
+    "brand-success": "color",
+    "brand-info": "color",
+    "brand-warning": "color",
+    "brand-danger": "color",
+    "component-active-color" : "color",
+    "component-active-bg" : "color"
   },
   "typography" : {
     "font-family-base": "font",
@@ -414,10 +423,51 @@ div#preview-curtain{
     "font-family-monospace": "font",
     "font-size-base" : "size"
   },
-  "forms": {},
-  "buttons": {},
-  "navbar": {},
-  "dropdowns" : {}
+  "forms": {
+    "input-bg" : "color",
+    "input-border" : "color",
+    "input-color" : "color",
+    "input-border-focus" : "color",
+    "input-color-placeholder" : "color",
+    "legend-color" : "color",
+    "legend-border-color": "color"
+   },
+  "buttons": {
+    "btn-font-weight" : "text",
+    "btn-default-color" : "color",
+    "btn-default-bg" : "color",
+    "btn-primary-color" : "color",
+    "btn-success-color" : "color",
+    "btn-info-color" : "color",
+    "btn-warning-color" : "color",
+    "btn-danger-color" : "color",
+    "btn-default-border" : "color"
+  },
+  "navbar": {
+    "navbar-default-color" : "color",
+    "navbar-default-bg" : "color",
+    "navbar-default-link-color" : "color",
+    "navbar-default-link-hover-color" : "color",
+    "navbar-default-link-hover-bg" : "color",
+    "navbar-height" : "size"
+  },
+  "dropdowns" : {
+    "dropdown-bg" : "color",
+    "dropdown-border" : "color",
+    "dropdown-link-color" : "color",
+    "dropdown-link-hover-color" : "color",
+    "dropdown-divider-bg" : "color",
+    "dropdown-link-hover-bg" : "color"
+  },
+  "panels": {
+    "panel-bg" : "color",
+    "panel-default-text" : "color"
+  },
+  "breadcrumb": {
+    "breadcrumb-bg": "color",
+    "breadcrumb-color": "color",
+    "breadcrumb-separator": "text"
+  }
 })
 ############################
 ## DISPLAY VARIABLES PANEL

@@ -28,6 +28,7 @@
 // As the main LESS file for this skin, we can use Velocity.
 // Here we initialize some variables that can be used in other LESS files
 //
+#if($request.colorTheme!="no")
 #set($doNotLoadColorThemeFromCSS = true)
 #template('colorThemeInit.vm')
 
@@ -80,12 +81,14 @@
 @xwiki-panel-header-bg:               $theme.panelHeaderBackgroundColor;
 @xwiki-panel-header-text:             $theme.panelHeaderTextColor;
 
-// Fix font path
-@icon-font-path:                      "$services.webjars.url('bootstrap/3.1.1/fonts')/";
-
 // Some XWiki variables
 @highlightColor:                      $theme.highlightColor;
 @background-secondary-color:          $theme.backgroundSecondaryColor;
+#end
+
+// Fix font path
+@icon-font-path:                      "$services.webjars.url('bootstrap/3.1.1/fonts')/";
+
 @accordion-title-bar-background:      "$xwiki.getSkinFile('icons/xwiki/accordion.png')";
 
 // Some Silk icons
@@ -102,6 +105,15 @@
 
 // And here it is the entry-point for color-theme textarea
 #if($themeDoc)
+  #set($flamingoThemeObj = $themeDoc.getObject('FlamingoThemesCode.ThemeClass'))
+  #if($flamingoThemeObj)
+    #set($flamingoThemeClass = $xwiki.getClass('FlamingoThemesCode.ThemeClass'))
+    #foreach($propertyName in $flamingoThemeClass.getEnabledPropertyNames())
+      #if($propertyName != 'lessCode' && $themeDoc.getValue($propertyName, $flamingoThemeObj) != '')
+        @$propertyName: $themeDoc.getValue($propertyName, $flamingoThemeObj)
+      #end
+    #end
+  #end
   #set($extraObj = $themeDoc.getObject('ColorThemes.ColorThemeExtraClass'))
   #if($extraObj)
     $themeDoc.getValue('lessCode', $extraObj)

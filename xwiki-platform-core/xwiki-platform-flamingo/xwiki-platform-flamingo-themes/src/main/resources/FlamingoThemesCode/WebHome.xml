@@ -40,6 +40,6 @@
   <comment/>
   <minorEdit>false</minorEdit>
   <syntaxId>xwiki/2.1</syntaxId>
-  <hidden>false</hidden>
+  <hidden>true</hidden>
   <content>{{spaceindex sort="docName"/}}</content>
 </xwikidoc>

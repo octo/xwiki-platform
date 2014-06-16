@@ -81,12 +81,14 @@
 platform.flamingo.themes.title.preview=Preview
 platform.flamingo.themes.autorefresh=Auto refresh
 platform.flamingo.themes.refresh=Refresh
-platform.flamingo.themes.refreshwarning=The refresh can takes several seconds and the preview might not be 100% accurate.
+platform.flamingo.themes.refreshwarning=The refresh can take several seconds and the preview might not be 100% accurate.
 platform.flamingo.themes.loading=Loading...
 platform.flamingo.themes.category.base-colors=Base colors
 platform.flamingo.themes.category.typography=Typography
 platform.flamingo.themes.category.forms=Forms
 platform.flamingo.themes.category.buttons=Buttons
 platform.flamingo.themes.category.navbar=Navigation Bar
-platform.flamingo.themes.category.dropdowns=Drop downs</content>
+platform.flamingo.themes.category.dropdowns=Drop downs
+platform.flamingo.themes.category.panels=Panels
+platform.flamingo.themes.category.breadcrumb=Breadcrumb</content>
 </xwikidoc>
